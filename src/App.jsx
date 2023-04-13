@@ -1,11 +1,17 @@
 import { useState } from 'react'
+import Header from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [budget, setBudget] = useState(0)
+  const [isBudgetValid, setIsBudgetValid] = useState(false)
 
   return (
     <div className="App">
-      <h1>Control de gastos</h1>
+      <Header
+        budget={budget}
+        setBudget={setBudget}
+        isBudgetValid={isBudgetValid}
+        setIsBudgetValid={setIsBudgetValid} />
     </div>
   )
 }
